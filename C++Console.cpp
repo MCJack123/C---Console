@@ -31,6 +31,12 @@ int main() {
 		else if (commandexe == "exit") {
 			break;
 			}
+		else if (commandexe == "clear") {
+			clearscreen();
+		}
+		else if (commandexe == "help clear") {
+			help("clear");
+		}
 		else {
 			std::cout << "The command you have entered has not been defined in command.h, or has not been added to C++Console.cpp.\n";
 			}
