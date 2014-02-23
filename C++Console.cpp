@@ -5,12 +5,11 @@
 
 int main() {
 	int cont = 1;
-    std::cout << "C++ Console v1.0\n";
-    while (cont == 1) {
-        std::string commandexe;
-        std::cout << "Console: ";
-        std::getline(std::cin, commandexe);
-		std::cin.ignore(100,'\n');
+    	std::cout << "C++ Console v1.0\n";
+    	while (cont == 1) {
+        	std::string commandexe;
+        	std::cout << "Console: ";
+        	std::getline(std::cin, commandexe);
 		if (commandexe == "hello") {
 			hello();
 			}
@@ -35,6 +34,7 @@ int main() {
 		else {
 			std::cout << "The command you have entered has not been defined in command.h, or has not been added to C++Console.cpp.\n";
 			}
+		std::cin.ignore(100,'\n');
 		}
 	return 0;
 }
