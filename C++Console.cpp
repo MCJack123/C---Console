@@ -34,7 +34,6 @@ int main() {
 		else {
 			std::cout << "The command you have entered has not been defined in command.h, or has not been added to C++Console.cpp.\n";
 			}
-		std::cin.ignore(100,'\n');
 		}
 	return 0;
 }
