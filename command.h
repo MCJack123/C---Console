@@ -1,8 +1,7 @@
-/* This header is used for the C++ Console made by Jack Bruienne on 2/23/14. If you want to make a new command, add a new function for your command here, add your command to C++Console.cpp, compile it, and add your command help to the command help list. You may distribute the header and cpp file MODIFIED, but you may not redistribute them unmodified.*/
+/* This header is used for the C++ Console made by MCJack123 on 2/23/14. If you want to make a new command, add a new function for your command here, add your command to C++Console.cpp, add the command to the command list and make a help article, and compile C++Console.cpp. You may distribute the header and cpp file MODIFIED, but you may not redistribute them unmodified.*/
 
 #include <iostream>
 #include <string>
-#include <fstream>
 
 //This is a hello world program
 int hello () {
