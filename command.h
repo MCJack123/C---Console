@@ -11,7 +11,7 @@ int hello () {
 //This is the help command
 int help (std::string arg) {
 	if (arg == "all") {
-		std::cout << "The valid commands are: \nhelp hello about exit\nIf you want to see more about a command, type 'help (command)'.\n";
+		std::cout << "The valid commands are: \nhelp hello about exit clear\nIf you want to see more about a command, type 'help (command)'.\n";
 		}
 	else if (arg == "help") {
 		std::cout << "Syntax: \nhelp <commands | (command)>\nHelp gives you help about the console, from seeing all the commands possible to getting help on one specific command.\n";
@@ -22,6 +22,9 @@ int help (std::string arg) {
 	else if (arg == "about") {
 		std::cout << "Syntax: \nabout\nAbout gives you information on the console.\n";
 		}
+	else if (arg == "clear") {
+		std::cout << "Syntax: \nclear\nClear clears your screen so you can have a clutterless console.";
+	}
 	else {
 		std::cout << "Something went wrong! Either it was that you put in an invalid argument or you entered no argument.\n";
 		}
@@ -30,5 +33,9 @@ int help (std::string arg) {
 //This is the about command
 int about () {
 	std::cout << "C++ Console v1.0, command.h v1.0 unmodded, written in C++11\n";
+	return 0;
+	}
+int clearscreen () {
+	std::cout << "/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n";
 	return 0;
 	}
