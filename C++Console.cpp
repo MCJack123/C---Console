@@ -9,7 +9,7 @@ int main() {
     while (cont == 1) {
         std::string commandexe;
         std::cout << "Console: ";
-        std::cin >> commandexe;
+        std::getline(std::cin, commandexe);
 		std::cin.ignore(100,'\n');
 		if (commandexe == "hello") {
 			hello();
