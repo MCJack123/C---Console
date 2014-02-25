@@ -9,6 +9,7 @@ Open Command Prompt (Windows) or Terminal (OS X or Linux). Type in "cd Downloads
 
 The advanced way to explain how to run the console:
 Open the command line, navigate to the C---Console-master folder, and compile C++Console.cpp. You can then run the compiled program to enter the command line.
+(Note: You will need to use g++ to compile. If you use gcc, you will get a ton of problems and end up not being able to compile.)
 
 
 The commands:
