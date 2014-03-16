@@ -29,7 +29,7 @@ int main() {
 			about();
 			}
 		else if (commandexe == "exit") {
-			break;
+			cont--;
 			}
 		else if (commandexe == "clear") {
 			clearscreen();
