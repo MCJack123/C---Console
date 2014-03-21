@@ -1,5 +1,5 @@
 #define CURL_STATICLIB
-#include <stdio.h>
+#include <iostream>
 #include <curl/curl.h>
 #include <curl/types.h>
 #include <curl/easy.h>
@@ -11,7 +11,7 @@ size_t write_data(void *ptr, size_t size, size_t nmemb, FILE *stream) {
     return written;
 }
 
-int download(char *url, std::string name) {
+int main(char *url, std::string name) {
     CURL *pCurl;
     FILE *fptr;
     CURLcode codes;
