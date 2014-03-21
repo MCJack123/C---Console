@@ -1,7 +1,7 @@
 C++ Console
 ===========
 Hello those of you that happen to come across this,
-This program that is on the repo is a terminal program that I have written in C++. To run this program, you will need to download BOTH C++Console.cpp and command.h to run the program.
+This program that is on the repo is a terminal program that I have written in C++. To run this program, you will need to download all the files to run the program. You will also need cURL, found at curl.haxx.se .
 
 
 The simplified way of explaining how to run the console: 
