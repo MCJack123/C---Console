@@ -10,9 +10,8 @@ Open Command Prompt (Windows) or Terminal (OS X or Linux). Type in "cd Downloads
 The advanced way to explain how to run the console:
 Open the command line, navigate to the C---Console-master folder, and compile C++Console.cpp. You can then run the compiled program to enter the command line.
 (Note: You will need to use g++ to compile. If you use gcc, you will get a ton of problems and end up not being able to compile.)
-
-
-The commands:
+Commands
+==========
 about
 Gives information about the prompt
 
@@ -25,8 +24,15 @@ A help program for the C++ console.
 clear
 A command that clears the screen
 
+installer
+A command to install, update, and remove items. Current arguments:
+  update
+  Updates an app or the console. Current arguments:
+    console
+    Updates the console.
 
-If you want to add a command, there will be instructions to add a command in command.h. Please look there to add a command.
+
+If you want to add a command, you can make "apps" with header files. For every app, you need to make an installer that downloads app.h, and adds #include "app.h", the command syntax and (optional) adds a help article. For your app to be officialy supported with installer, email me at "jackbruienne at yahoo dot com".
 Have great simplified coding!
 
 MCJack123
