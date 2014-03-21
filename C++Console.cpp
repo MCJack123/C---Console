@@ -42,29 +42,29 @@ int main() {
 			help("clear");
 		}
 		else if (commandexe == "installer update console") {
-			download("http://www.cppconsole.org/CPPConsole/Latest/.version");
+			download("http://www.cppconsole.org/CPPConsole/Latest/.version" ".version");
 			std::ifstream ifs(".version");
   			std::string content;
 			content.assign( (std::istreambuf_iterator<char>(ifs) ),
                 		(std::istreambuf_iterator<char>()    ) );
                 	if (content > "1.1") {
 				#ifdef __APPLE__
-					download("http://www.cppconsole.org/CPPConsole/Latest/C++ConsoleMac");
+					download("http://www.cppconsole.org/CPPConsole/Latest/C++ConsoleMac" "C++Console");
 					std::stringstream stream;
 					stream <<"update";
 					system(stream.str().c_str());
 				#elif __WIN32__
-					download("http://www.cppconsole.org/CPPConsole/Latest/C++Console.exe");
+					download("http://www.cppconsole.org/CPPConsole/Latest/C++Console.exe" "C++Console.exe");
 					std::stringstream stream;
 					stream <<"update.exe";
 					system(stream.str().c_str());
 				#elif __WIN64__
-					download("http://www.cppconsole.org/CPPConsole/Latest/C++Console.exe");
+					download("http://www.cppconsole.org/CPPConsole/Latest/C++Console.exe" "C++Console.exe");
 					std::stringstream stream;
 					stream <<"update.exe";
 					system(stream.str().c_str());
 				#elif __linux__
-					download("http://www.cppconsole.org/CPPConsole/Latest/Linux/C++ConsoleLinux");
+					download("http://www.cppconsole.org/CPPConsole/Latest/Linux/C++ConsoleLinux" "C++Console");
 					std::stringstream stream;
 					stream <<"update";
 					system(stream.str().c_str());
