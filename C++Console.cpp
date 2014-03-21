@@ -42,7 +42,9 @@ int main() {
 			help("clear");
 		}
 		else if (commandexe == "installer update console") {
-			download("http://www.cppconsole.org/CPPConsole/Latest/.version" ".version");
+			std::stringstream stream;
+			stream <<"update"<<"http://www.cppconsole.org/CPPConsole/Latest/.version"<<".version";
+			system(stream.str().c_str());;
 			std::ifstream ifs(".version");
   			std::string content;
 			content.assign( (std::istreambuf_iterator<char>(ifs) ),
