@@ -26,13 +26,13 @@ A command that clears the screen
 
 installer
 A command to install, update, and remove items. Current arguments:
-  update
-  Updates an app or the console. Current arguments:
-    console
-    Updates the console.
+    update
+    Updates an app or the console. Current arguments:
+        console
+        Updates the console.
 
 
-If you want to add a command, you can make "apps" with header files. For every app, you need to make an installer that downloads app.h, and adds #include "app.h", the command syntax and (optional) adds a help article. For your app to be officialy supported with installer, email me at "jackbruienne at yahoo dot com".
+If you want to add a command, you can make "apps" with header files. For every app, you need to make an installer that downloads app.h, and adds #include "app.h", the command syntax and (optional) adds a help article. For your app to be officialy supported with installer, open an issue with a link to the header and the name of the app.
 Have great simplified coding!
 
 MCJack123
