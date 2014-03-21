@@ -49,24 +49,20 @@ int main() {
                 		(std::istreambuf_iterator<char>()    ) );
                 	if (content > "1.1") {
 				#ifdef __APPLE__
-					download("http://www.cppconsole.org/CPPConsole/Latest/C++ConsoleMac" "C++Console");
 					std::stringstream stream;
-					stream <<"update";
+					stream <<"update"<<"http://www.cppconsole.org/CPPConsole/Latest/C++ConsoleMac"<<"C++Console";
 					system(stream.str().c_str());
 				#elif __WIN32__
-					download("http://www.cppconsole.org/CPPConsole/Latest/C++Console.exe" "C++Console.exe");
 					std::stringstream stream;
-					stream <<"update.exe";
+					stream <<"update.exe"<<"http://www.cppconsole.org/CPPConsole/Latest/C++Console.exe"<<"C++Console.exe";
 					system(stream.str().c_str());
 				#elif __WIN64__
-					download("http://www.cppconsole.org/CPPConsole/Latest/C++Console.exe" "C++Console.exe");
 					std::stringstream stream;
-					stream <<"update.exe";
+					stream <<"update.exe"<<"http://www.cppconsole.org/CPPConsole/Latest/C++Console.exe"<<"C++Console.exe";
 					system(stream.str().c_str());
 				#elif __linux__
-					download("http://www.cppconsole.org/CPPConsole/Latest/Linux/C++ConsoleLinux" "C++Console");
 					std::stringstream stream;
-					stream <<"update";
+					stream <<"update"<<"http://www.cppconsole.org/CPPConsole/Latest/C++ConsoleLinux"<<"C++Console";
 					system(stream.str().c_str());
 				#endif
 				
