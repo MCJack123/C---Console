@@ -32,7 +32,7 @@ int help (std::string arg) {
 	}
 //This is the about command
 int about () {
-	std::cout << "C++ Console v1.0, command.h v1.0 unmodded, written in C++11\n";
+	std::cout << "C++ Console v1.1\n";
 	return 0;
 	}
 int clearscreen () {
