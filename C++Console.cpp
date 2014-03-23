@@ -1,11 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <curl/curl.h>
-#include <curl/types.h>
-#include <curl/easy.h>
 #include "command.h"
-#include "update.h"
 
 int main() {
 	int cont = 1;
