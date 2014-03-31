@@ -12,5 +12,27 @@ int dumpFile(std::string file) {
   return 0;
 }
 int download(std::string url, std::string name) {
-  
+  CURL *pCurl;
+  FILE *fptr;
+  CURLcode codes;
+  #ifdef __WIN32__
+    char outfilename[256] = "%HOMEPATH%\\C++ Console\\"name;
+  #elif __WIN64__
+    char outfilename[256] = "%HOMEPATH%\\C++ Console\\"name;
+  #elif __APPLE__
+    char outfilename[256] = "~/C++ Console/"name;
+  #elif __linux__
+    char outfilename[256] = "$HOME/C++ Console/"name;
+  #endif
+  pCurl = curl_easy_init();
+  if (pCurl) {
+    fptr = fopen(outfilename,"wb");
+    curl_easy_setopt(pCurl, CURLOPT_URL, url);
+    curl_easy_setopt(pCurl,, CURLOPT_WRITEFUNCTION, write_data);
+    curl_easy_setopt(pCurl,, CURLOPT_WRITEDATA, fptr);
+    res = curl_easy_perform(pCurl);
+    curl_easy_cleanup(pCurl);
+    fclose(fptr);
+  }
+  return 0;
 }
