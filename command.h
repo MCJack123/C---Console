@@ -11,7 +11,7 @@ int hello () {
 //This is the help command
 int help (std::string arg) {
 	if (arg == "all") {
-		std::cout << "The valid commands are: \nhelp hello about exit clear\nIf you want to see more about a command, type 'help (command)'.\n";
+		std::cout << "The valid commands are: \nhelp hello about exit clear installer\nIf you want to see more about a command, type 'help (command)'.\n";
 		}
 	else if (arg == "help") {
 		std::cout << "Syntax: \nhelp <commands | (command)>\nHelp gives you help about the console, from seeing all the commands possible to getting help on one specific command.\n";
@@ -24,6 +24,9 @@ int help (std::string arg) {
 		}
 	else if (arg == "clear") {
 		std::cout << "Syntax: \nclear\nClear clears your screen so you can have a clutterless console.";
+	}
+	else if (arg == "installer") {
+		std::cout << "Syntax: \ninstaller\nInstaller helps you install and update apps and the console.\nWARNING: You can only have one app at a time (for now).";
 	}
 	else {
 		std::cout << "Something went wrong! Either it was that you put in an invalid argument or you entered no argument.\n";
@@ -39,3 +42,7 @@ int clearscreen () {
 	std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 	return 0;
 	}
+int installer() {
+	std::cout << "---C++ Console Installer---\n";
+	
+}
