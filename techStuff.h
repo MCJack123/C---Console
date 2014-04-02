@@ -36,3 +36,9 @@ int download(std::string url, std::string name) {
   }
   return 0;
 }
+int runFile(std::string file) {
+	std::stringstream stream;
+	stream <<file ;
+	system(stream.str().c_str());;
+	return 0;
+}
