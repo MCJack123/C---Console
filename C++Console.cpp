@@ -10,7 +10,7 @@
 
 int main() {
 	int cont = 1;
-    	std::cout << "C++ Console v1.1.1\n";
+    	std::cout << "C++ Console v1.2\n";
     	while (cont == 1) {
         	std::string commandexe;
         	std::cout << "Console: ";
