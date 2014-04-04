@@ -57,7 +57,7 @@ int installer() {
 		int option;
 		std::cin >> option;
 		if (option == "1") {
-			std::cout >> "Checking for updates...\n";
+			std::cout >> \n"Checking for updates...\n";
 			download("http://cppconsole.bruienne.com/"app"/.version" "."app"version");
 			dumpFile("."app"version");
 			if (contents > appversion) {
@@ -65,7 +65,7 @@ int installer() {
 				char optupdate;
 				std::cin >> optupdate;
 				if (optupdate == "Y") {
-					std::cout << "Downloading update...\n";
+					std::cout << "\nDownloading update...\n";
 					download("cppconsole.bruienne.com/"app"/"app".h" app".h");
 					std::cout << "Please restart the console to complete.\n";
 				}
@@ -80,15 +80,51 @@ int installer() {
 			}
 		}
 		else if (option == "2") {
-			std::cout << "Are you sure you want to delete? (Y/N)\n:";
+			std::cout << "\nAre you sure you want to delete? (Y/N)\n:";
 			char optdelete;
 			std::cin >> optdelete;
 			if (optdelete == "Y") {
-				download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++Console")
+				std::cout << "\nDownloading clean files...\n"
+				download("http://cppconsole.bruienne.com/CPPConsole/Latest/command.h" "command.h");
+				download("http://cppconsole.bruienne.com/CPPConsole/latest/techStuff.h" "techStuff.h");
+				#ifdef __APPLE__
+					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++ConsoleMac" "C++ Console");
+				#elif __WIN32__
+					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++Console.exe" "C++ Console.exe");
+				#elif __WIN64__
+					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++Console.exe" "C++ Console.exe");
+				#elif __linux__
+					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++ConsoleLinux" "C++ Console");
+				#endif
+			}
+			else {
+				std::cout << "\nCancelling delete...\n";
+				return 1;
+				
 			}
 		}
 	}
-
-	
-	
+	else {
+		std::cout << app << "is not installed. Do you want to install it? (Y/N)\n:";
+		char install;
+		std::cin >> install;
+		if (install == "Y") {
+			std::cout << "\nInstalling...\n"
+			download("http://cppconsole.bruienne.com/"app"/Latest/"app".h" app".h");
+			#ifdef __APPLE__
+				download("http://cppconsole.bruienne.com/"app"/Latest/C++ConsoleMac" "C++ Console");
+			#elif __WIN32__
+				download("http://cppconsole.bruienne.com/"app"/Latest/C++Console.exe" "C++ Console.exe");
+			#elif __WIN64__
+				download("http://cppconsole.bruienne.com/"app"/Latest/C++Console.exe" "C++ Console.exe");
+			#elif __linux__
+				download("http://cppconsole.bruienne.com/"app"/Latest/C++ConsoleLinux" "C++ Console");
+			#endif
+		}
+		else {
+			std::cout << "\nCancelling installation...\n";
+			return 1;
+		}
+	}
+	return 0;
 }
