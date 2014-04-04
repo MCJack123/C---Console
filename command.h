@@ -2,7 +2,10 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
+#include "techStuff.h"
 
+float appversion = 0.0
 //This is a hello world program
 int hello () {
 	std::cout << "Hello World!\n";
@@ -43,6 +46,44 @@ int clearscreen () {
 	return 0;
 	}
 int installer() {
-	std::cout << "---C++ Console Installer---\n";
+	std::cout << "---C++ Console Installer---\nSelect an app:\n";
+	//If you know how to list the files/folders of a website, do that for the website cppconsole.bruienne.com.
+	std::cout << ":";
+	std::string app;
+	std::cin >> app;
+	ifstream ifile(filename);
+	if (ifile) {
+		std::cout << app << "is installed. Choose an option:\n1. Update  2. Delete\n:"
+		int option;
+		std::cin >> option;
+		if (option == "1") {
+			std::cout >> "Checking for updates...\n";
+			download("http://cppconsole.bruienne.com/"app"/.version" "."app"version");
+			dumpFile("."app"version");
+			if (contents > appversion) {
+				std::cout << "A new update is available. Would you like to update (Y/N)\n:";
+				char optupdate;
+				std::cin >> optupdate;
+				if (optupdate == "Y") {
+					std::cout << "Downloading update...\n";
+					download("cppconsole.bruienne.com/"app"/"app".h" app".h");
+					std::cout << "Please restart the console to complete.\n";
+				}
+				else if (optupdate == "N") {
+					std::cout << "Cancelling update...\n";
+					return 1;
+				}
+			}
+			else {
+				std::cout << "No update is available for "<< app <<".\n";
+				return 2;
+			}
+		}
+		else if (option == "2") {
+			std::cout << "Are you sure you want to delete? (Y/N)\n:";
+		}
+	}
+
+	
 	
 }
