@@ -81,6 +81,11 @@ int installer() {
 		}
 		else if (option == "2") {
 			std::cout << "Are you sure you want to delete? (Y/N)\n:";
+			char optdelete;
+			std::cin >> optdelete;
+			if (optdelete == "Y") {
+				download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++Console")
+			}
 		}
 	}
 
