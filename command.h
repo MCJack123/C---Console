@@ -51,7 +51,13 @@ int installer() {
 	std::cout << ":";
 	std::string app;
 	std::cin >> app;
-	ifstream ifile(filename);
+	if (app == "CPPConsole) {
+                std::cout << "\nCPPConsole is the system. Would you like to check for updates? (Y/N)\n:";
+                char checkupdate;
+                std::cin >> checkupdate;
+                if (checkupdate == "Y") {
+                        std::cout << "\nChecking for updates...
+        ifstream ifile(filename);
 	if (ifile) {
 		std::cout << app << "is installed. Choose an option:\n1. Update  2. Delete\n:"
 		int option;
