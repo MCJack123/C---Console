@@ -3,7 +3,7 @@
 #include <fstream>
 #include <curl/curl.h>
 #include <curl/easy.h>
-#include <ssring>
+#include <sstream>
 #include "command.h"
 #include "techStuff.h"
 #include "*.h"
