@@ -56,7 +56,7 @@ int installer() {
                 char checkupdate;
                 std::cin >> checkupdate;
                 if (checkupdate == "Y") {
-                        std::cout << "\nChecking for updates...
+                        std::cout << "\nChecking for updates...";
         ifstream ifile(filename);
 	if (ifile) {
 		std::cout << app << "is installed. Choose an option:\n1. Update  2. Delete\n:"
@@ -91,16 +91,16 @@ int installer() {
 			std::cin >> optdelete;
 			if (optdelete == "Y") {
 				std::cout << "\nDownloading clean files...\n"
-				download("http://cppconsole.bruienne.com/CPPConsole/Latest/command.h" "command.h");
-				download("http://cppconsole.bruienne.com/CPPConsole/latest/techStuff.h" "techStuff.h");
+				download("http://cppconsole.bruienne.com/CPPConsole/Latest/command.h", "command.h");
+				download("http://cppconsole.bruienne.com/techStuff/Latest/techStuff.h", "techStuff.h");
 				#ifdef __APPLE__
-					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++ConsoleMac" "C++ Console");
+					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++ConsoleMac", "C++ Console");
 				#elif __WIN32__
-					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++Console.exe" "C++ Console.exe");
+					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++Console.exe", "C++ Console.exe");
 				#elif __WIN64__
-					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++Console.exe" "C++ Console.exe");
+					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++Console.exe", "C++ Console.exe");
 				#elif __linux__
-					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++ConsoleLinux" "C++ Console");
+					download("http://cppconsole.bruienne.com/CPPConsole/Latest/C++ConsoleLinux", "C++ Console");
 				#endif
 			}
 			else {
@@ -116,15 +116,15 @@ int installer() {
 		std::cin >> install;
 		if (install == "Y") {
 			std::cout << "\nInstalling...\n"
-			download("http://cppconsole.bruienne.com/"app"/Latest/"app".h" app".h");
+			download("http://cppconsole.bruienne.com/"app"/Latest/"app".h", app".h");
 			#ifdef __APPLE__
-				download("http://cppconsole.bruienne.com/"app"/Latest/C++ConsoleMac" "C++ Console");
+				download("http://cppconsole.bruienne.com/"app"/Latest/C++ConsoleMac", "C++ Console");
 			#elif __WIN32__
-				download("http://cppconsole.bruienne.com/"app"/Latest/C++Console.exe" "C++ Console.exe");
+				download("http://cppconsole.bruienne.com/"app"/Latest/C++Console.exe", "C++ Console.exe");
 			#elif __WIN64__
-				download("http://cppconsole.bruienne.com/"app"/Latest/C++Console.exe" "C++ Console.exe");
+				download("http://cppconsole.bruienne.com/"app"/Latest/C++Console.exe", "C++ Console.exe");
 			#elif __linux__
-				download("http://cppconsole.bruienne.com/"app"/Latest/C++ConsoleLinux" "C++ Console");
+				download("http://cppconsole.bruienne.com/"app"/Latest/C++ConsoleLinux", "C++ Console");
 			#endif
 		}
 		else {
