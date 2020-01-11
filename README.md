@@ -31,7 +31,4 @@ A command to install, update, and remove items. Current arguments:
         Updates the console.
 
 
-If you want to add a command, you can make "apps". An app is a compiled C++ class. For your app to be officialy supported with installer, login to GitHub with the email 'cppconsoleapps@gmail.com' and the password 'consoleapps'. Then add your compiled app to the folder for the system the compiled app is for (in the Compiled Apps folder in the Apps repo). If you want to add the source code, add it to the 'src' folder. Also add the name of your app to the Apps.txt file.
-Have great simplified coding!
-
 MCJack123
